@@ -4,7 +4,7 @@ console.log('I live!');
 //finding the user's name
 var cohort = [
 'sean',
-'bri',
+'bree',
 'clay',
 'james',
 'noah',
