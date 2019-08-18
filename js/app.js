@@ -201,23 +201,25 @@ console.log('beginning of question 6');
     'brut',
   ]
   var wineCheck = 0;
-  var wineAttempts = 1;
+  var wineAttempts = 0;
   var wineGuess = '';
   while (wineGuess === '' && wineAttempts < 6) {
     console.log('beginning of while loop. Iteration '+wineAttempts);
     wineAttempts++;
     wineGuess = prompt('Follow up question. What is a favorite wine of mine?').toLowerCase();
     for (var i = 0;i<winePreference.length;i++){
-      wineCheck++;
       if(winePreference[i] === wineGuess){
+        console.log(wineGuess+' is '+winePreference[i]);
         alert('Yay '+userName+' you got it!');
         alert('I like pino noir, zifendel, and brut wines');
         break;
       } else {
         console.log(wineGuess+' is not '+winePreference[i]);
+        wineCheck++;
+        console.log('wineCheck is '+wineCheck);
       }
     }
-    if(wineCheck = winePreference.length){
+    if(wineCheck === winePreference.length){
       alert('Try again!');
       wineGuess = '';
     }
@@ -232,9 +234,13 @@ console.log('count of correct inputs: '+countOfTrues);
 console.log('count of inccorrect inputs: '+countOfFalses);
 console.log('count of invalid inputs: '+countOfFails); 
 
+console.log('beginning of question 7');
+  //seventh question question
+
+
 if(countOfTrues > 4){
-  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/6)*100));
+  alert('You passed, '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/7)*100));
 } else {
-  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/6)*100));
+  alert('Sorry '+userName+' You got '+countOfTrues+' for a score of '+((countOfTrues/7)*100));
 }
 
